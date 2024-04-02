@@ -8,13 +8,13 @@ body {
     
 }
 
-
 #calculator {
     font-family: Arial, sans-serif;
     background-color: hsl(0, 0%, 13%);
     border-radius: 15px;
     max-width: 500px;
     overflow: hidden;
+    padding: 20px;
 }
 
 #display {
@@ -59,11 +59,11 @@ button:active {
 }
 
 .green-btn:hover {
-    background-color: hsl(119, 80%, 51%);
+    background-color: hsl(119, 80%, 69%);
 }
 
 .green-btn:hover {
-    background-color: hsl(119, 100%, 61%);
+    background-color: hsl(119, 100%, 79%);
 }
 .orange-btn {
     background-color: hsl(33, 92%, 51%);
