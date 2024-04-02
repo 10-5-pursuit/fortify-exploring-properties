@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(150, 10%, 35%);
+    
+}
+
+#calculator {
+    font-family: Arial, sans-serif;
+    background-color: hsl(0, 0%, 13%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: hsl(0, 0%, 13%);
+    color: white;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;    
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size:  3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
+button:active {
+    background-color: hsl(0, 0%, 50%);
+}
+
+.green-btn {
+    background-color: hsl(119, 60%, 59%);
+}
+
+.green-btn:hover {
+    background-color: hsl(119, 80%, 69%);
+}
+
+.green-btn:hover {
+    background-color: hsl(119, 100%, 79%);
+}
+.orange-btn {
+    background-color: hsl(33, 92%, 51%);
+}
+
+.orange-btn:hover {
+    background-color: hsl(33, 95%, 61%);
+}
+
+.orange-btn:hover {
+    background-color: hsl(33, 100%, 71%);
+}
+.blurple {
+    background-color:hsl(249, 89%, 66%);
+}
+
+.blurple:hover {
+    background-color: hsl(249, 95%, 76%);
+}
+
+.blurple:hover {
+    background-color: hsl(249, 100%, 86%);
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+
+$anim-duration: 5; // in seconds
+$anim-speed: 0.65; // in seconds
+
+:root {
+  --btn-border: 1px solid rgba(255, 255, 255, 0.2);
+  --btn-bg: transparent; // #333
+  --btn-shadow: 1px 1px 25px 10px rgba(255, 255, 255, 0.5);
+  --btn-text-color: #f4f4f4;
+
+  --shine-degree: 120deg;
+  --shine-color: rgba(255, 255, 255, 0.2);
+  --shine-effect: linear-gradient(
+    var(--shine-degree),
+    transparent,
+    var(--shine-color),
+    transparent
+  );
+  --shine-transition: all #{$anim-speed}s ease-in-out;
+}
+.btn {
+    position: relative;
+    overflow: hidden; // debug
+  
+    // last element should not have margin
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+    font-size: 3rem; 
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;    
+    color: white;
+    font-weight: bold;
+    cursor: pointer;   
+    text-decoration: none;
+    border: var(--btn-border);
+ 
+    // background: var(--btn-bg);
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--shine-effect);
+    }
+  }
+  
+  .btn-hover {
+    &::before {
+      left: -100%;
+      transition: var(--shine-transition);
+    }
+  
+    &:hover {
+      box-shadow: var(--btn-shadow);
+  
+      &::before {
+        left: 100%;
+      }
+    }
+  }
