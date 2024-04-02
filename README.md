@@ -1,3 +1,3 @@
 # fortify-exploring-properties
 
-   - [Calculator](2-calculator\index.html)
+   - [Calculator](./2-calculator/index.html)
